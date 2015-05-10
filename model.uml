@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_kfRrIPcBEeSCpc8jMzPp8Q" name="test">
+  <packagedElement xmi:type="uml:Interface" xmi:id="_2j3AAPcDEeSCpc8jMzPp8Q" name="IDriver">
+    <ownedOperation xmi:id="_47saEPcDEeSCpc8jMzPp8Q" name="drive">
+      <ownedParameter xmi:id="_6W83IPcDEeSCpc8jMzPp8Q" name="car" type="_TsTLQPcDEeSCpc8jMzPp8Q"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="__D7joPcDEeSCpc8jMzPp8Q" name="Car">
+    <interfaceRealization xmi:id="_eMzDoPcFEeSCpc8jMzPp8Q" client="__D7joPcDEeSCpc8jMzPp8Q" supplier="_TsTLQPcDEeSCpc8jMzPp8Q" contract="_TsTLQPcDEeSCpc8jMzPp8Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PsQn0PcEEeSCpc8jMzPp8Q" name="Driver">
+    <interfaceRealization xmi:id="_eoIUwPcFEeSCpc8jMzPp8Q" client="_PsQn0PcEEeSCpc8jMzPp8Q" supplier="_2j3AAPcDEeSCpc8jMzPp8Q" contract="_2j3AAPcDEeSCpc8jMzPp8Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_TsTLQPcDEeSCpc8jMzPp8Q" name="ICar">
+    <ownedOperation xmi:id="_ae2dIPcDEeSCpc8jMzPp8Q" name="run">
+      <ownedParameter xmi:id="_eooV8PcDEeSCpc8jMzPp8Q" name="speed">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tTpwMPcUEeSCpc8jMzPp8Q" name="iCarsToIDrivers" memberEnd="_tTpwMfcUEeSCpc8jMzPp8Q _tT-gUvcUEeSCpc8jMzPp8Q" navigableOwnedEnd="_tTpwMfcUEeSCpc8jMzPp8Q _tT-gUvcUEeSCpc8jMzPp8Q">
+    <ownedEnd xmi:id="_tTpwMfcUEeSCpc8jMzPp8Q" name="iCars" type="_TsTLQPcDEeSCpc8jMzPp8Q" association="_tTpwMPcUEeSCpc8jMzPp8Q">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tT-gUPcUEeSCpc8jMzPp8Q" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tT-gUfcUEeSCpc8jMzPp8Q" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_tT-gUvcUEeSCpc8jMzPp8Q" name="iDrivers" type="_2j3AAPcDEeSCpc8jMzPp8Q" association="_tTpwMPcUEeSCpc8jMzPp8Q">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tUTQcPcUEeSCpc8jMzPp8Q" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tUTQcfcUEeSCpc8jMzPp8Q" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
