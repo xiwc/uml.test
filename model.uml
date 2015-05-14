@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_kfRrIPcBEeSCpc8jMzPp8Q" name="test">
+  <packageImport xmi:id="_TiW88Pn0EeSNwcY34AKs0Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#_0"/>
+  </packageImport>
   <packagedElement xmi:type="uml:Interface" xmi:id="_2j3AAPcDEeSCpc8jMzPp8Q" name="IDriver">
     <ownedOperation xmi:id="_47saEPcDEeSCpc8jMzPp8Q" name="drive">
       <ownedParameter xmi:id="_6W83IPcDEeSCpc8jMzPp8Q" name="car" type="_TsTLQPcDEeSCpc8jMzPp8Q"/>
@@ -27,5 +30,52 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tUTQcPcUEeSCpc8jMzPp8Q" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tUTQcfcUEeSCpc8jMzPp8Q" value="1"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_Fr2qsPn1EeSNwcY34AKs0Q" client="_FsKMsPn1EeSNwcY34AKs0Q" supplier="_Fr340Pn1EeSNwcY34AKs0Q" contract="_Fr340Pn1EeSNwcY34AKs0Q"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_Fr9_cPn1EeSNwcY34AKs0Q" client="_FsUkwPn1EeSNwcY34AKs0Q" supplier="_Fr-mgPn1EeSNwcY34AKs0Q" contract="_Fr-mgPn1EeSNwcY34AKs0Q"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_atPZ0Pn1EeSNwcY34AKs0Q" name="com.xiwc.uml.test">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Fr340Pn1EeSNwcY34AKs0Q" name="IPeople">
+      <ownedOperation xmi:id="_Fr340fn1EeSNwcY34AKs0Q" name="say">
+        <ownedParameter xmi:id="_Fr340vn1EeSNwcY34AKs0Q" name="content">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Fr-mgPn1EeSNwcY34AKs0Q" name="IPeopleFactory">
+      <ownedOperation xmi:id="_Fr_NkPn1EeSNwcY34AKs0Q" name="create">
+        <ownedParameter xmi:id="_Fr_Nkfn1EeSNwcY34AKs0Q" name="sex" type="_FsN3EPn1EeSNwcY34AKs0Q"/>
+        <ownedParameter xmi:id="_Fr_Nkvn1EeSNwcY34AKs0Q" name="people" type="_Fr340Pn1EeSNwcY34AKs0Q" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FsUkwPn1EeSNwcY34AKs0Q" name="SimplePeopleFactory"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FsKMsPn1EeSNwcY34AKs0Q" name="People" isAbstract="true">
+      <ownedAttribute xmi:id="_FsKMsfn1EeSNwcY34AKs0Q" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FsKMsvn1EeSNwcY34AKs0Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FsKMs_n1EeSNwcY34AKs0Q" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_FsKMtPn1EeSNwcY34AKs0Q" name="say" isAbstract="true">
+        <ownedParameter xmi:id="_FsKMtfn1EeSNwcY34AKs0Q" name="content">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_FsKMtvn1EeSNwcY34AKs0Q" name="setSex" isAbstract="true">
+        <ownedParameter xmi:id="_FsKMt_n1EeSNwcY34AKs0Q" name="sex" type="_FsN3EPn1EeSNwcY34AKs0Q"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FsSIgPn1EeSNwcY34AKs0Q" name="Male">
+      <generalization xmi:id="_FsSIgfn1EeSNwcY34AKs0Q" general="_FsKMsPn1EeSNwcY34AKs0Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_FsN3EPn1EeSNwcY34AKs0Q" name="Sex">
+      <ownedLiteral xmi:id="_FsN3Efn1EeSNwcY34AKs0Q" name="Male">
+        <specification xmi:type="uml:LiteralInteger" xmi:id="_FsN3Evn1EeSNwcY34AKs0Q"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_FsN3E_n1EeSNwcY34AKs0Q" name="Female">
+        <specification xmi:type="uml:LiteralInteger" xmi:id="_FsN3FPn1EeSNwcY34AKs0Q" value="1"/>
+      </ownedLiteral>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FsFUMPn1EeSNwcY34AKs0Q" name="Female">
+      <generalization xmi:id="_FsFUMfn1EeSNwcY34AKs0Q" general="_FsKMsPn1EeSNwcY34AKs0Q"/>
+    </packagedElement>
   </packagedElement>
 </uml:Model>
